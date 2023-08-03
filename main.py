@@ -78,12 +78,13 @@ def main():
             )
 
             time.sleep(delay_comment)
-
-            vk.wall.createComment(
-                owner_id = -group_id,
-                post_id = last_post_id,
-                message = random.choice(text)
-            )
+            
+            if random.randint(0, 10) >= 4:
+                vk.wall.createComment(
+                    owner_id = -group_id,
+                    post_id = last_post_id,
+                    message = random.choice(text)
+                )
             
         
 if __name__ == "__main__":
